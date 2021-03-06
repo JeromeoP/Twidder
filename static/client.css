@@ -1,0 +1,80 @@
+#maincontainer{
+
+  margin-left: auto;
+	margin-right: auto;
+  width: 600px;
+  height: 400px;
+  margin-top: 100px;
+
+}
+#picture{
+  float: left;
+  width: 340px;
+  height: 400px;
+}
+
+#logIn {
+  width: 250px;
+  height: 100px;
+  margin-left: 350px;
+  text-align: right;
+}
+
+#signUp {
+  width: 250px;
+  height: 290px;
+  margin-left: 350px;
+  margin-top: 10px;
+  text-align: right;
+
+}
+label{
+  float:left;
+}
+
+#tabBody {
+  height: 100%;
+  margin: 0;
+
+}
+.tablink {
+  background-color: AliceBlue;
+  color: BurlyWood;
+  float: left;
+  border: none;
+  padding: 25px;
+  font-size: 20px;
+  border-radius: 25px;
+  width: 33.3333%;
+
+}
+
+.tabcontent {
+  color: black;
+  display: none;
+  width: 100%;
+}
+#twiddWallDiv {
+  margin-top: 50px;
+  border-style: solid;
+  width: 65%;
+}
+
+#changePasswordForm {
+  width: 300px;
+  height: 290px;
+
+  text-align: right;
+}
+
+#infoPage {
+  float:right;
+  width: 30%;
+  height: 200px;
+}
+
+#userSearch {
+
+  width: 300px;
+  text-align: right;
+}
