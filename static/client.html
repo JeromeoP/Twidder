@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <title>Twidder</title>
+<link href="/static/client.css" type="text/css" rel="stylesheet">
+<script src="/static/client.js"></script>
+
+<script id="welcomeView" type = "text/view">
+
+<div id = "maincontainer">
+
+<div id="picture">
+<img src="/static/wimage.png" alt = "twidder">
+</div>
+<div id ="logIn">
+<form action = "javascript:signIn();" id="signInCompare">
+  <h3>Log in</h3>
+
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+  <input type="submit" id ="loginbutton" value="Log in">
+  <div id = "signInAlert">
+  </div>
+
+</form>
+</div>
+
+<div id = "signUp">
+<form action = "javascript:signUp();" id="signupForm">
+  <h3>Sign up</h3>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" >
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" >
+  <label for="gender">Choose a gender:</label>
+  <select name="gender" id="gender" >
+  <option value="male">Male</option>
+  <option value="female">Female</option>
+  <option value="helicopter">Helicopter</option>
+  <option value="nothing">Nothing</option>
+
+
+</select><br>
+<label for="city">City:</label>
+<input type="text" id="city" name="city" required><br>
+<label for="country">Country:</label>
+<input type="text" id="country" name="country" ><br>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" ><br>
+<label for="passwordReg">Password:</label>
+<input type="password" id="passwordReg" name="passwordReg"  minlength ="6" required>
+<label for="passwordReg2">Psw again:</label>
+<input type="password" id="passwordReg2" name="passwordReg2" minlength ="6" onkeyup="checkPassword();" required>
+<div id = "wrongPassswordAlert">
+</div>
+<input type="submit" value="Sign up">
+</form>
+
+</div>
+
+
+
+
+</script>
+
+<script  id="profileView" type = "text/view">
+<div>
+<body id="tabBody">
+<button class="tablink" onclick="changeTab('home', this)" id="defaultOpen">Home</button>
+<button class="tablink" id="browseButton" onclick="changeTab('browse', this)">Browse</button>
+<button class="tablink" id="accountButton" onclick="changeTab('account', this)">Account</button>
+
+<div id="home" class="tabcontent">
+<div id="infoPage">
+<h4 id= "personalInfo"></h4>
+<label id = "emailLabel"></label><br>
+<label id = "nameLabel"></label><br>
+<label id = "genderLabel"></label><br>
+<label id = "cityLabel"></label><br>
+<label id = "countryLabel"></label><br>
+</div>
+<div id = "messageBox">
+  <h3>Let´s post a message to your wall</h3>
+
+  <form id = "sendTwidd" action = "javascript:sendTwiid();">
+  <textarea id="textArea" rows = "4" cols = "50"></textarea><br>
+  <input type = "submit" id = "sendTwiidButton" value = "Send twidd">
+  </form>
+  </div>
+
+  <div id="twiddWallDiv">
+
+  <span id="twiddWallList">
+  </span>
+
+  <div>
+  <button id = "refreshButton" onclick = "javascript:updateWall();">Refresh wall</button>
+  </div>
+
+  </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<div id="browse" class="tabcontent">
+  <h3>Browse</h3>
+  <p>Lets browse</p>
+
+<form id = "userSearch" action = "javascript:searchUser();">
+  <label for = "searchUser"> Search for user: </label>
+  <input type = "text" id = "searchUser" name = "searchUser"><br>
+  <button id = "userSearchButton"> Search</button>
+  <div id = "somethingWentWrong">
+  </div>
+</form>
+
+<div id="infoPageSearch">
+<h4 id= "personalInfoSearch"></h4>
+<label id = "emailLabelSearch"></label><br>
+<label id = "nameLabelSearch"></label><br>
+<label id = "genderLabelSearch"></label><br>
+<label id = "cityLabelSearch"></label><br>
+<label id = "countryLabelSearch"></label><br>
+</div>
+
+
+<form id = "sendTwiddToUser" action = "javascript:sendTwiidToUser();" >
+<h2>Send Twiid to selected user</h2>
+<textarea id="textAreaUser" rows = "4" cols = "50"></textarea><br>
+<input type = "submit" value = "Send twidd">
+<div id="errorSendTwiidToUser">
+</div>
+</form>
+
+<div id="userTwiddWallDiv">
+<span id="userTwiddWallList">
+</span>
+</div>
+<div>
+<button id = "userRefreshButton" onclick = "javascript:updateUserWall();">Refresh wall</button>
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div id="account" class="tabcontent">
+  <h3>Account</h3>
+
+  <p>This is your account!</p>
+
+  <form id = "changePasswordForm" action = "javascript:changePassword();">
+    <h3>Change password</h3>
+
+
+    <label for="oldPassword">Old password:</label>
+    <input type="password" id="oldPassword" name="oldPassword" required><br>
+
+    <label for="passwordReg">New password:</label>
+    <input type="password" id="passwordReg" name="passwordReg" required><br>
+
+    <label for="passwordReg2">New psw again:</label>
+    <input type="password" id="passwordReg2" name="passwordReg2" onkeyup="checkPassword();" required><br>
+    <input type="submit" id="changePasswordButton" value="Change password">
+    <div id = "wrongPassswordAlert">
+    </div>
+
+  </form><br>
+<div>
+<button type = "button" id = "signOut" onclick = "javascript:signOut()">Sign out</button>
+</div>
+
+</div>
+</body>
+</div>
+
+</script>
+<body id="body"> </body>
+
+</html>
