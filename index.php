@@ -1,1 +1,1 @@
-<?php header( 'Location: /twidder/static/client.html' ) ;  ?>
+<?php header( 'Location: /index.html' ) ;  ?>
