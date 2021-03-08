@@ -1,0 +1,7 @@
+selenium
+flask
+gevent
+gevent-websocket
+flask_bcrypt
+gunicorn
+werkzeug==0.16.0
