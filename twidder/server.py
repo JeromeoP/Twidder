@@ -24,7 +24,7 @@ def index():
     return app.send_static_file('client.html')
 
 
-@app.route('/twidder/sign-in', methods=['POST'])
+@app.route('/sign-in', methods=['POST'])
 def sign_in():
     data = request.get_json()
     email = data['email']
