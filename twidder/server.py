@@ -200,7 +200,7 @@ def post_message():
     else:
         return jsonify({"success": False, "message": "You are not signed in."})
 
-
+'''
 @app.route('/socket')
 def api():
     if request.environ.get('wsgi.websocket'):
@@ -237,7 +237,7 @@ def api():
                     #print(socket died or w/e)
                     return "w/e"
 
-
+'''
 
 
 
