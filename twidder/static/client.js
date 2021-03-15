@@ -430,7 +430,7 @@ function searchUser(){
 
   }
 
-/*function socket() {
+function socket() {
   var token = localStorage.getItem("token");
   console.log(token)
   ws = new WebSocket("ws://" + document.domain + ":5000/socket");
@@ -454,7 +454,7 @@ function searchUser(){
 };
 
 }
-*/
+
 //Function from W3 Schools
 
 function changeTab(pageName, tabElement){
